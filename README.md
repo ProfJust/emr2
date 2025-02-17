@@ -9,8 +9,7 @@ Stichworte:  ROS2 - Humble, openCV, Gazebo-Classic, MoveIt!2, UR3, UR3e, UR5e, r
 
 
 ## Usage - Start der Umgebung mit UR5 mit Gripper ##
->$1 roslaunch ur5_moveit_config demo_gazebo.launch 
-
+>$1 ros2 launch ur_simulation_gazebo ur_sim_control.launch.py ur_type:=ur3e
 
 
 ## Installation ##
