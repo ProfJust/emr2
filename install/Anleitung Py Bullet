@@ -1,0 +1,64 @@
+pip install pybullet
+pip install attrdict
+Gedit /home/oju/.local/lib/python3.10/site-packages/attrdict/mapping.py
+   merge.py
+   default.py
+   mixins.py
+
+change from collections import Mapping
+to     from collections.abc import Mapping
+
+
+pip install torch torchvision torchaudio
+pip install "numpy<2.0"
+
+
+cd ~
+git clone https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
+cd pybullet_ur5_robotiq/
+python main.py
+
+
+Problem mit attrdict
+
+python main.py
+pybullet build time: Jan 29 2025 23:16:28
+Traceback (most recent call last):
+  File "/home/oju/pybullet_ur5_robotiq/main.py", line 7, in <module>
+    from env import ClutteredPushGrasp
+  File "/home/oju/pybullet_ur5_robotiq/env.py", line 9, in <module>
+    from utilities import Models, Camera
+  File "/home/oju/pybullet_ur5_robotiq/utilities.py", line 4, in <module>
+    from attrdict import AttrDict
+  File "/home/oju/.local/lib/python3.10/site-packages/attrdict/__init__.py", line 5, in <module>
+    from attrdict.mapping import AttrMap
+  File "/home/oju/.local/lib/python3.10/site-packages/attrdict/mapping.py", line 10, in <module>
+    from attrdict.mixins import MutableAttr
+  File "/home/oju/.local/lib/python3.10/site-packages/attrdict/mixins.py", line 5, in <module>
+    from collections import Mapping, MutableMapping, Sequence
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/lib/python3.10/collections/__init__.py)
+
+
+Der Fehler ImportError: cannot import name 'Mapping' from 'collections' tritt auf, weil sich in Python 3.10 die Position einiger Klassen innerhalb des Moduls collections geändert hat. Die Klasse Mapping wurde von collections nach collections.abc verschoben.
+
+Das Problem liegt daran, dass die verwendete Bibliothek (attrdict) veraltet ist und nicht mit Python 3.10 oder höher kompatibel ist.
+
+Meine VErsion:
+python --version
+Python 3.10.12
+
+
+Der Fehler ModuleNotFoundError: No module named 'torch' tritt auf, weil PyTorch nicht in Ihrer Python-Umgebung installiert ist. Hier sind die Schritte, um PyTorch zu installieren und das Problem zu beheben:
+1. Installation von PyTorch mit pip
+
+Führen Sie die folgenden Befehle aus, um PyTorch zu installieren:
+Für CPU-Unterstützung:
+
+bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+Für GPU-Unterstützung (wenn CUDA verfügbar ist):
+
+bash
+pip install torch torchvision torchaudio
+
