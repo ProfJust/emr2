@@ -1,6 +1,6 @@
 # Installieren der Gripper-Pakete
 cd ~/ur3_ws/src
-git clone https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
+git clone https://github.com/PickNikRobotics/ros2_robotiq_gripper.git -b humble
 cd ~/ur3_ws/
 build
 # ???? ros2 launch robotiq_description view_gripper.launch.py
@@ -30,9 +30,14 @@ change parent to tool0
 </xacro:robotiq_gripper>
 
 # build
+
 # ros2 launch ur_simulation_gazebo ur_sim_control.launch.py ur_type:=ur3e
+Bewegungstest
+ros2 launch ur_robot_driver test_joint_trajectory_controller.launch.py
 
 
+ROS2 Fehler ausgeben;
+ros2 topic echo /rosout
 
 #################################################################################
 SS25:
