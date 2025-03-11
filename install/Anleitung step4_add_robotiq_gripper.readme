@@ -43,6 +43,10 @@ ros2 topic echo /rosout
 SS25:
 Funktioniert, aber Gripper in Gazebo ist Destroyed
 
+Lösung ????   https://github.com/DFKI-NI/mobipick/issues/16
+
+
+
 
 by Pybullit funktioniert der Gripper
 https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
