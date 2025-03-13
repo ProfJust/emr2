@@ -31,6 +31,20 @@ $ git clone https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
 $ cd pybullet_ur5_robotiq/
 $ python3 main.py
 
+================ ROS2 und pyBullet ==========================
+https://github.com/09ubberboy90/simple_pybullet_ros2
+# Install pyquaternion
+pip install pyquaternion
+# Clone this repository and the submodules into your favourite ROS 2 workspace
+git clone https://github.com/09ubberboy90/simple_pybullet_ros2.git
+# Install external dependencies via rosdep
+rosdep install -r --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
+# Build with colcon
+colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+
+
+
+
 ==========================================================================
 Problem mit attrdict lösen
 
