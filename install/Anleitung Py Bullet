@@ -12,19 +12,27 @@ change from collections import Mapping
 to     from collections.abc import Mapping
 in all those four files
 
+Torch mit langsmaer CPU-Unterstützung:
+$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+Für GPU-Unterstützung (wenn CUDA verfügbar ist):
+$ pip install torch torchvision torchaudio
+
 
 $ pip install torch torchvision torchaudio
 $ pip install "numpy<2.0"
+$ pip3 install tqdm
+
 
 $ cd /home/robotik/
 $ mkdir pybullet_ws
 $ cd pybullet_ws/
 $ git clone https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
 $ cd pybullet_ur5_robotiq/
-$ python main.py
+$ python3 main.py
 
 ==========================================================================
-Problem mit attrdict
+Problem mit attrdict lösen
 
 python main.py
 pybullet build time: Jan 29 2025 23:16:28
@@ -52,6 +60,8 @@ Meine VErsion:
 python --version
 Python 3.10.12
 
+================================================================================
+Problem mit Torch
 
 Der Fehler ModuleNotFoundError: No module named 'torch' tritt auf, weil PyTorch nicht in Ihrer Python-Umgebung installiert ist. Hier sind die Schritte, um PyTorch zu installieren und das Problem zu beheben:
 1. Installation von PyTorch mit pip
