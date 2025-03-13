@@ -1,24 +1,29 @@
-pip install pybullet
-pip install attrdict
-Gedit /home/oju/.local/lib/python3.10/site-packages/attrdict/mapping.py
+WSL:
+
+$ pip install pybullet
+$ pip install attrdict
+
+$ nano /home/robotik/.local/lib/python3.10/site-packages/attrdict/mapping.py
    merge.py
    default.py
    mixins.py
 
-change from collections import Mapping
+change from collections import Mapping 
 to     from collections.abc import Mapping
+in all those four files
 
 
-pip install torch torchvision torchaudio
-pip install "numpy<2.0"
+$ pip install torch torchvision torchaudio
+$ pip install "numpy<2.0"
 
+$ cd /home/robotik/
+$ mkdir pybullet_ws
+$ cd pybullet_ws/
+$ git clone https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
+$ cd pybullet_ur5_robotiq/
+$ python main.py
 
-cd ~
-git clone https://github.com/ElectronicElephant/pybullet_ur5_robotiq.git
-cd pybullet_ur5_robotiq/
-python main.py
-
-
+==========================================================================
 Problem mit attrdict
 
 python main.py
